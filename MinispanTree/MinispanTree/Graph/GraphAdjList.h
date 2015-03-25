@@ -39,6 +39,7 @@ void CreateGraphAdjList(GraphAdjList *G){   /*创建邻接表*/
     printf("输入顶点数和边数:\n");
     scanf("%d,%d",&G->numVertexes,&G->numEdges);/*输入顶点数和边数*/
     for( i = 0;i <G->numVertexes;i++){  //读入顶点信息，建立顶点表
+        //在自己电脑程序中有改变，下课后更改
         scanf(&G->adjList[i].data);
         G->adjList[i].firstdege=NULL;  /*邻接表初始化*/
     }
