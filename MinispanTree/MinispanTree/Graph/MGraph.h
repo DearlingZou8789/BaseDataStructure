@@ -11,10 +11,15 @@ typedef struct {
 
 void CreateMGraph(MGraph *G){
     int i,j,k,w;
+    char c;
     printf("输入顶点数和边数:\n");
     scanf("%d,%d",&G->numVertexes,&G->numEdges);/*输入顶点数和边数*/
     for( i = 0;i <G->numVertexes;i++){  //读入顶点信息，建立顶点表
-        scanf("%c",&G->vexs[i]);
+        printf("请输入第%d个顶点:",i+1);
+        while((c = getchar()) == '\n' && c == EOF);
+        fflush(stdin);
+        scanf(&G->vexs[i]);
+//        fflush(stdin);
     }
     for(i = 0;i <G->numVertexes;i++)
         for(j = 0;j <G->numVertexes;j++)

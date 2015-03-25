@@ -7,8 +7,6 @@
 //
 
 #include "main.h"
-#include "Graph/GraphAdjList.h"
-#include "Graph/MGraph.h"
 
 int main(int argc,const char *argv[]){
     MGraph *G=malloc(sizeof(MGraph));
@@ -18,12 +16,10 @@ int main(int argc,const char *argv[]){
     scanf("%d",&choice);
     switch(choice){
         case 1:
-
 //            G = malloc(sizeof(MGraph));
             CreateMGraph(G);
             break;
         case 2:
-
 //            GM = malloc(sizeof(GraphAdjList));
             CreateGraphAdjList(GM);
             break;
