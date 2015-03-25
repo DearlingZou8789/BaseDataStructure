@@ -10,6 +10,8 @@
 #define __MinispanTree__main__
 
 #include <stdio.h>
-#include "Graph/MGraph.h"
+//#include "Graph/MGraph.h"
+//#include "Graph/GraphAdjList.h"
+
 
 #endif /* defined(__MinispanTree__main__) */

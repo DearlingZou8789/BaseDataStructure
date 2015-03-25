@@ -28,6 +28,7 @@
 		BC40A4D01AC1353D0011590F /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		BC40A4D11AC1353D0011590F /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		BC40A4F91AC18D1B0011590F /* GraphAdjList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphAdjList.h; sourceTree = "<group>"; };
+		BCB1FB511AC23FFC0057D9A0 /* GraphType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphType.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 			children = (
 				BC40A4CD1AC134CF0011590F /* MGraph.h */,
 				BC40A4F91AC18D1B0011590F /* GraphAdjList.h */,
+				BCB1FB511AC23FFC0057D9A0 /* GraphType.h */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
