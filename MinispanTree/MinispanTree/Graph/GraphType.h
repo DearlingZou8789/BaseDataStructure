@@ -6,11 +6,7 @@
 //  Copyright (c) 2015年 qianfeng. All rights reserved.
 //
 
-//#ifndef MinispanTree_GraphType_h
-//#define MinispanTree_GraphType_h
-//
-//
-//#endif
+//保存图结构的基本数据类型及最大数组数
 
 #define MAXVEX 100		/*定义最大顶点树为100*/
 #define INFINITY 65536		/*用65535来代表∞*/

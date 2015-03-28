@@ -28,6 +28,9 @@
 		BC40A4D01AC1353D0011590F /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		BC40A4D11AC1353D0011590F /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		BC40A4F91AC18D1B0011590F /* GraphAdjList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphAdjList.h; sourceTree = "<group>"; };
+		BCAD0F2E1AC689A600F1694C /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		BCAD0F2F1AC689A600F1694C /* structtype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = structtype.h; sourceTree = "<group>"; };
+		BCAD0F311AC6951E00F1694C /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		BCB1FB511AC23FFC0057D9A0 /* GraphType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphType.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +64,9 @@
 		BC40A4CB1AC134CF0011590F /* MinispanTree */ = {
 			isa = PBXGroup;
 			children = (
+				BCAD0F301AC6951E00F1694C /* Stack */,
+				BCAD0F2D1AC689A600F1694C /* Queue */,
+				BCAD0F2F1AC689A600F1694C /* structtype.h */,
 				BC40A4CC1AC134CF0011590F /* Graph */,
 				BC40A4D01AC1353D0011590F /* main.c */,
 				BC40A4D11AC1353D0011590F /* main.h */,
@@ -77,6 +83,23 @@
 			);
 			path = Graph;
 			sourceTree = "<group>";
+		};
+		BCAD0F2D1AC689A600F1694C /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				BCAD0F2E1AC689A600F1694C /* Queue.h */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		BCAD0F301AC6951E00F1694C /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				BCAD0F311AC6951E00F1694C /* Stack.h */,
+			);
+			name = Stack;
+			path = MinispanTree/Stack;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
