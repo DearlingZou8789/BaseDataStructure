@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 qianfeng. All rights reserved.
 //
 
-#ifndef __MinispanTree__main__
-#define __MinispanTree__main__
+#ifndef __MinispanTree__main_h
+#define __MinispanTree__main_h
 
 #include <stdio.h>
 #include <stdlib.h>

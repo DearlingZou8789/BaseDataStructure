@@ -4,12 +4,15 @@
 #include <stdio.h>
 #include "../structtype.h"
 
-#define MAXSIZE 100
+#ifndef QUEUEMAXSIZE
+#define QUEUEMAXSIZE 100
+#endif
+
 typedef int QElemType;	//QElemType类型根据实际情况而定，这里假设为int
 
 //循环队列的顺序存储结构
 typedef struct{
-	QElemType data[MAXSIZE];
+	QElemType data[QUEUEMAXSIZE];
 	int rear;	//尾指针，若队列不空，指向队列元素的下一个位置
 	int front;	//头指针
 }SqQueue;

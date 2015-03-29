@@ -17,7 +17,7 @@ void initSqStack(SqStack *S){
 
 //进栈操作push
 Status Push(SqStack *S,SElemType e){
-    if(S->top==MAXSIZE-1)   //栈满了
+    if(S->top==STACKMAXSIZE-1)   //栈满了
         return ERROR;
     S->top++;               //栈顶指针加1
     S->data[S->top]=e;         //将新插入元素赋值给栈顶空间
@@ -38,7 +38,7 @@ Status Pop(SqStack *S,SElemType e){
 //初始化两栈共享空间结构
 void initSqDoubleStack(SqDoubleStack *S){
     S->top1=-1;     //注意栈1是从0下标开始的，所以初始化时是从-1开始
-    S->top2=MAXSIZE;    //栈2是栈1相反的方向开始的，其值是从MAXSIZE-1开始，所以是从MAXSIZE开始的
+    S->top2=STACKMAXSIZE;    //栈2是栈1相反的方向开始的，其值是从STACKMAXSIZE-1开始，所以是从STACKMAXSIZE开始的
 }
 
 //对于两栈共享空间的push方法，除了要插入元素值参数外，还需要有一个判断是栈1还是栈2的栈号参数stackNumber
@@ -61,7 +61,7 @@ Status SqPop(SqDoubleStack *S,SElemType e,int stackNumber){
             return ERROR;   //说明栈1已经是空栈，溢出
         e=S->data[S->top1--];  //将栈1的栈顶元素出栈
     }else if(stackNumber==2){
-        if(S->top2==MAXSIZE)
+        if(S->top2==STACKMAXSIZE)
             return ERROR;   //说明栈2已经是空栈，溢出
         e=S->data[S->top2++];  //将栈2的栈顶元素出栈
     }

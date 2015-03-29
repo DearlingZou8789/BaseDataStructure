@@ -18,16 +18,16 @@ Status InitSqQueue(SqQueue *Q){
 
 //返回队列Q的元素长度，也就是队列的当前长度
 int SqQueueLength(SqQueue Q){
-    return (Q.rear-Q.front+MAXSIZE)%MAXSIZE;
+    return (Q.rear-Q.front+QUEUEMAXSIZE)%QUEUEMAXSIZE;
 }
 
 //循环队列的入队操作
 //若队列未满，则插入元素e为Q新的队尾元素
 Status EnSqQueue(SqQueue Q,QElemType e){
-    if((Q.rear+1)%MAXSIZE==Q.front)    //队列满的标志
+    if((Q.rear+1)%QUEUEMAXSIZE==Q.front)    //队列满的标志
         return ERROR;
     Q.data[Q.rear]=e;            //将该元素e插入到队尾
-    Q.rear=(Q.rear+1)%MAXSIZE;  //rear指针向后移动一个位置，若到最后则转到数组头部
+    Q.rear=(Q.rear+1)%QUEUEMAXSIZE;  //rear指针向后移动一个位置，若到最后则转到数组头部
     return OK;
 }
 
@@ -38,7 +38,7 @@ Status DeSqQueue(SqQueue *Q,QElemType e){
     if(Q->front==Q->rear)       //队列空的判断
         return ERROR;
     e=Q->data[Q->front];       //将队头的元素返回给e
-    Q->front=(Q->front+1)%MAXSIZE;  //将对头指针向后移动一个位置
+    Q->front=(Q->front+1)%QUEUEMAXSIZE;  //将对头指针向后移动一个位置
     //若到最后则转到数组头部
     return OK;
 }

@@ -1,5 +1,5 @@
-#ifndef MinispanTree_GraphAdjList_h
-#define MinispanTree_GraphAdjList_h
+#ifndef MinispanTree_MGraph_h
+#define MinispanTree_MGraph_h
 /*图表的邻接矩阵*/
 
 #include <stdio.h>
@@ -19,6 +19,10 @@ void DFSMGraph(MGraph *G,int i);
 
 //邻接矩阵的深度遍历操作
 void DFSMGraphTraverse(MGraph *G);
+
+//邻接矩阵的广度遍历算法
+
+void BFSTraverse(MGraph *G);
 
 
 #endif

@@ -7,10 +7,13 @@
 
 
 typedef int SElemType;	/*SElemType类型根据实际情况而定，这里假设是int*/
-#define MAXSIZE 100
+
+#ifndef STACKMAXSIZE
+#define STACKMAXSIZE 100
+#endif
 
 typedef struct{     //定义顺序存储栈
-    SElemType data[MAXSIZE];
+    SElemType data[STACKMAXSIZE];
     int top;    //用于栈顶指针
 }SqStack;
 
@@ -28,7 +31,7 @@ Status Pop(SqStack *S,SElemType e);
 //可以想想，只要它们俩不见面，两个占就可以一直使用
 //两栈共享空间结构，顺序存储栈
 typedef struct{
-    SElemType data[MAXSIZE];
+    SElemType data[STACKMAXSIZE];
     int top1;   //栈1栈顶指针
     int top2;   //栈2栈顶指针
 }SqDoubleStack;
