@@ -21,7 +21,6 @@ void DFSMGraph(MGraph *G,int i);
 void DFSMGraphTraverse(MGraph *G);
 
 //邻接矩阵的广度遍历算法
-
 void BFSTraverse(MGraph *G);
 
 
