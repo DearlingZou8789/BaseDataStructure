@@ -5,10 +5,13 @@
 //  Created by qianfeng on 15/3/24.
 //  Copyright (c) 2015年 qianfeng. All rights reserved.
 //
+
+#ifndef MinispanTree_GraphAdjList_h
+#define MinispanTree_GraphAdjList_h
+
+
 #include "GraphType.h"
 #include <string.h>
-//#ifndef MinispanTree_GraphAdjList_h
-//#define MinispanTree_GraphAdjList_h
 
 /*邻接表,定义了邻接表的类型*/
 
@@ -67,14 +70,14 @@ void CreateGraphAdjList(GraphAdjList *G){   /*创建邻接表*/
 //时间复杂度(n)
 
 //邻接表的深度优先递归算法
-void DFS(GraphAdjList *GL,int i){
+void DFSGraphAdjList(GraphAdjList *GL,int i){
     EdgeNode *p;
     visited[i]=TRUE;
     printf("%c",GL->adjList[i].data);   //打印i顶点的数据
-    p = GL->firstedge;
+    p = GL->adjList[i].firstedge;
     while(p){
         if(!visited[p->adjvex])
-            DFS(GL,p->adjvex);          //对未访问的邻接顶点递归调用
+            DFSGraphAdjList(GL,p->adjvex);          //对未访问的邻接顶点递归调用
         p = p->next;
     }
 }
@@ -86,8 +89,10 @@ void DFSTraverse(GraphAdjList *GL){
         visited[i]=FALSE;           //初始化visited数组，将其设置为未访问
     for(i = 0;i < GL->numVertexes;i++)
         if(!visited[i])             //对未访问的顶点i进行DFS访问,对于连通图,只会执行一次
-            DFS(GL,i);
+            DFSGraphAdjList(GL,i);
 }
 //对于点多边少的稀疏图来说，邻接表结构似的算法在时间效率上大大提高
 //找邻接点所需的时间取决于顶点和边数，时间复杂度（n＋e）
-//#endif
+
+
+#endif
