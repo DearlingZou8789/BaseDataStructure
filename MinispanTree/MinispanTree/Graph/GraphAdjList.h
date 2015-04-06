@@ -10,8 +10,11 @@
 #define MinispanTree_GraphAdjList_h
 
 #include <stdio.h>
-#include "GraphType.h"
+#include <stdlib.h>
 #include <string.h>
+#include "GraphType.h"
+#include "../Queue/Queue.h"
+
 
 /*邻接表,定义了邻接表的类型*/
 
@@ -34,13 +37,16 @@ typedef struct
     int numVertexes,numEdges;   /*图中当前顶点数和边数*/
 }GraphAdjList;                  //图de邻接表
 
-void CreateGraphAdjList(GraphAdjList *G);   /*创建邻接表*/
+extern void GraphAdjListCreate(GraphAdjList *GL);   /*创建邻接表*/
 
 //邻接表的深度优先递归算法
-void DFSGraphAdjList(GraphAdjList *GL,int i);
+extern void GraphAdjListDFS(GraphAdjList *GL,int i);
 
 //邻接表的深度遍历操作
-void DFSTraverse(GraphAdjList *GL);
+extern void GraphAdjListDFSTraverse(GraphAdjList *GL);
+
+//邻接表的广度遍历算法
+extern void GraphAdjListBFSTraverse(GraphAdjList *GL);
 
 
 

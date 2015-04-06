@@ -15,6 +15,10 @@
 #define MAXVEX 100		/*定义最大顶点树为100*/
 #endif
 
+#ifndef MAXEDGE
+#define MAXEDGE ((MAXVEX)*(MAXVEX))
+#endif
+
 #ifndef INFINITY
 #define INFINITY 65536		/*用65535来代表∞*/
 #endif
