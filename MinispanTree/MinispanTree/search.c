@@ -186,7 +186,7 @@ void L_Rotate(BiTree *p)
     *p = R;                //p指向新的根结点
 }
 
-/*对以指针T所指结点为根的二叉树作作做平衡旋转处理
+/*对以指针T所指结点为根的二叉树作作做左平衡旋转处理
  * 本算法结束是，指针T指向新的根结点
  */
 void LeftBalance(BiTree *T)
@@ -219,6 +219,42 @@ void LeftBalance(BiTree *T)
             Lr->bf = EH;
             L_Rotate(&(*T)->lchild);       //对T的左子树作左旋平衡处理
             R_Rotate(T);                    //对T作右旋平衡处理
+    }
+}
+
+/*对以指针T所指结点为根的二叉树作作做右平衡旋转处理
+ * 本算法结束是，指针T指向新的根结点
+ */
+void RightBalance(BiTree *T)
+{
+    BiTree L, Lr;
+    L = (*T)->rchild;       //L指向T的右子树根结点
+    switch(L->bf)
+    {
+        //检查T的右子树的平衡度，并做相应平衡处理
+        case RH:        //新结点插入在T的右孩子的右子树上，要作单左旋转处理
+            (*T)->bf = L->bf = EH;
+            L_Rotate(T);
+            break;
+        case LH:        //新节点插入在T的右孩子的左子树上，要作双旋处理
+            Lr = L->lchild;     //Lr指向T的右孩子的左子树根
+            switch(Lr->bf)  //修改T及其右子树的平衡因子
+            {
+                case LH:
+                    (*T)->bf = EH;
+                    L->bf = RH;
+                    break;
+                case EH:
+                    (*T)->bf = L->bf = EH;
+                    break;
+                case RH:
+                    (*T)->bf = LH;
+                    L->bf = EH;
+                    break;
+            }
+            Lr->bf = EH;
+            R_Rotate(&(*T)->rchild);       //对T的右子树作右旋平衡处理
+            L_Rotate(T);                    //对T作左旋平衡处理
     }
 }
 
